@@ -35,8 +35,8 @@ export class NewblogComponent implements OnInit {
     this.formData.append('body', this.newblog.get('body').value);
     this.formData.append('blogImage', this.newblog.get('blogImage').value)
     this.formData.append('tags', this.newblog.get('tags').value)
-    console.log(this.newblog.value)
-    this.blogservice.postblog(this.newblog.value).subscribe(
+    console.log(this.newblog.get('blogImage').value)
+    this.blogservice.postblog(this.formData).subscribe(
       a => {
         console.log(a);
         this.router.navigateByUrl('home');

@@ -1,25 +1,27 @@
-<div>
-    <pre>
-    <br><br><br>
-    <input type="text" [(ngModel)]="editedBlog.title" value="{{editedBlog.title}}"><br>
-    <br>
-    <input type="text" [(ngModel)]="editedBlog.body" value="{{editedBlog.body}}"><br>
-    <br>
-    <input type="text" [(ngModel)]="editedBlog.tags" value="{{editedBlog.tags}}">
-    <br>
-    <br>
-    <a (click)="edit()" class="btn btn-info" routerLink=''>Save</a>
-    <br>
-  
-
-
-
-
-
-
-
-
-
-
-</pre>
+<div class="container" >
+    <legend> Edit </legend>
+    <div class="form-group">
+        <label for="title" class="col-sm-3 control-label">Title </label>
+        <div class="col-sm-4">
+            <textarea class="form-control" id="title" placeholder="title" [(ngModel)]="editedBlog.title" value="{{editedBlog.title}}"></textarea>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="body" class="col-sm-3 control-label"> Body </label>
+        <div class="col-sm-4">
+            <textarea  class="form-control" id="body" placeholder="body" [(ngModel)]="editedBlog.body" value="{{editedBlog.body}}"> </textarea> 
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="footer" class="col-sm-3 control-label"> Tags </label>
+        <div class="col-sm-4">
+            <textarea class="form-control" id="footer" placeholder="footer" [(ngModel)]="editedBlog.tags" value="{{editedBlog.tags}}"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <a routerLink=""><button (click)="edit()" class="btn btn-info" class="btn btn-primary">Save</button></a>
+        
+    </div>
 </div>
+

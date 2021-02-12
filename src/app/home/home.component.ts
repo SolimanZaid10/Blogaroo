@@ -37,21 +37,13 @@ export class HomeComponent implements OnInit {
     )
   }
 
-  postComment(){
-    let id="";
-    this.ac.params.subscribe(
-      a=>{
-        id=a['id']
-        this.blogService.postComment(id,this.comment).subscribe(
-          e=>{
-            e.body=this.comment
-            console.log(e)
-          }
-        )
+  postComment(id:any){
+    this.blogService.postComment(id,this.comment).subscribe(
+      e=>{
+        e.body=this.comment
+        console.log(e)
       }
-
     )
-
   }
   
 

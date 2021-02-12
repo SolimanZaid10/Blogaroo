@@ -16,3 +16,30 @@ div{
     border-radius: 15px;
     
 }
+
+
+
+
+.form-control{
+    width: 100%;
+
+}
+textarea , .form-group {
+    width: 290%;
+    border-radius: 20px;
+}
+.container{
+    
+    margin: 15px 300px ;
+    
+   width: 40%;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.btn{
+    width: 6%;
+  margin: 10px 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+

@@ -32,5 +32,10 @@ textarea {
   input{
       border-radius: 10px;
   }
-
+.container{
+    margin: 10px auto;
+}
+.row{
+    margin-top: 40px;
+}
   

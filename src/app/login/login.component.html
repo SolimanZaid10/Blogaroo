@@ -1,35 +1,18 @@
-<br><br>
 <div id="contain">
-<div class="login">
+  <div class="login">
     <div class="form">
       <h1> Blogaroo </h1><br>
-  <form #signup="ngForm" [formGroup]="loginForm"> 
-    <input type="text"
-    class="login-input"
-    placeholder="username"
-    name="uname"
-    required
-    maxlength="20"
-    minlength="3"
-    formControlName="username"
-    ><br>
-      <span *ngIf="isValied('username')"> invaled username</span>
-    <br>
-    <input type="password"
-    class="login-input"
-    placeholder="password"
-    name="pass"
-    required
-    minlength="4"
-    formControlName="password"
-    ><br>
-    <span *ngIf="isValied('password')">invaled password</span>
-    <br>
-  </form>
-  <button (click)="login()" type="submit">Log in</button>
+      <form #signup="ngForm" [formGroup]="loginForm">
+        <input type="text" class="login-input" placeholder="username" name="uname" required maxlength="20" minlength="3"
+          formControlName="username"><br>
+        <span *ngIf="isValied('username')"> invaled username</span>
+        <br>
+        <input type="password" class="login-input" placeholder="password" name="pass" required minlength="4"
+          formControlName="password"><br>
+        <span *ngIf="isValied('password')">invaled password</span>
+      </form>
+      <button (click)="login()" type="submit">Log in</button>
+    </div>
   </div>
-  </div>
-  </div>
-  <br><br><br><br><br>
- 
- 
+</div>
+<br><br><br><br>

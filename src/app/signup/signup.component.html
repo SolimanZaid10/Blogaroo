@@ -1,72 +1,49 @@
-<br><br>
-<div id="contain">
-<div class="login">
+<div id="contain"><br>
+  <div class="login">
     <div class="form">
-      <h1> Blogaroo </h1><br>
-  <form #signup="ngForm" [formGroup]="myForm"> 
-    <input type="text"
-    class="login-input"
-    placeholder="firstname"
-    name="firstname"
-    formControlName="firstName"
-    ><br>
-    <span *ngIf="isValied('firstName')">invalid firstname</span>
-  <!--   <span *ngIf="stdname.touched && stdname.errors?.required">Required</span>
-    <span *ngIf="stdname.touched && stdname.errors?.maxlength">Name is incorrect</span>
-    <span *ngIf="stdname.touched && stdname.errors?.minlength">min length is 2</span> -->
-    <br>
-    <input type="text"
-    class="login-input"
-    placeholder="lastname"
-    name="lastname"
-    formControlName="lastName"
-    ><br>
-    <span *ngIf="isValied('lastName')">invalid lastname</span>
-<!--     <span *ngIf="lastname.touched && lastname.errors?.required">Required</span>
-    <span *ngIf="stlname.touched && stlname.errors?.maxlength">Name is incorrect</span>
-    <span *ngIf="stlname.touched && stlname.errors?.minlength">min length is 2</span> -->
-    <br>
-    <input type="email"
-    placeholder="example@mail.com"
-    class="login-input"
-    name="email"
-    formControlName="email"
-    ><br>
-    <span *ngIf="isValied('email')">invalid email</span>
-   <!--  <span *ngIf="email.touched && email.errors?.required">email is Required</span>
-    <span [hidden]="!email.errors?.pattern"> invalid </span> -->
-    <br>
-    
-    <input type="text"
-    placeholder="username"
-    class="login-input"
-    name="username"
-    formControlName="username"
-    ><br>
-    <span *ngIf="isValied('username')">invalid username</span>
- <!--    <span *ngIf="uname.touched && uname.errors?.required"> User Name is Required</span>
-    <span *ngIf="uname.touched && uname.errors?.maxlength">Name is incorrect</span>
-    <span *ngIf="uname.touched && uname.errors?.minlength">min length is 2</span> -->
-    <br>
-    <input type="password"
-    class="login-input"
-    placeholder="password"
-    name="password"
-    formControlName="password"
-    ><br>
-    <span *ngIf="isValied('password')">invalid password</span>
-   <!--  <span *ngIf="pass.touched && pass.errors?.required">Password is Required</span>
-    <span *ngIf="pass.touched && pass.errors?.maxlength">Maxlength incorrect</span>
-    <span *ngIf="pass.touched && pass.errors?.minlength">Min length is 6</span> -->
-    <br>
-  </form>
-  <button (click)="register()" type="submit"> Register </button>
-
-  </div>
-  </div>
-  </div>
-  <br>
-  <br>
-  <br><br>
-  <br>
- 
+      <h1> Blogaroo </h1>
+      <form #signup="ngForm" [formGroup]="myForm">
+        <div id="item">
+        <input type="text" class="login-input" placeholder="firstname" name="firstname" formControlName="firstName"><br>
+        <span *ngIf="isValied('firstName')">invalid firstname</span>
+        </div>
+        <!--   <span *ngIf="stdname.touched && stdname.errors?.required">Required</span>
+              <span *ngIf="stdname.touched && stdname.errors?.maxlength">Name is incorrect</span>
+              <span *ngIf="stdname.touched && stdname.errors?.minlength">min length is 2</span> -->
+     <div id="item">
+      <input type="text" class="login-input" placeholder="lastname" name="lastname" formControlName="lastName"><br>
+      <span *ngIf="isValied('lastName')">invalid lastname</span>
+     </div>
+        <!--     <span *ngIf="lastname.touched && lastname.errors?.required">Required</span>
+                  <span *ngIf="stlname.touched && stlname.errors?.maxlength">Name is incorrect</span>
+                  <span *ngIf="stlname.touched && stlname.errors?.minlength">min length is 2</span> -->
+      <div id="item">
+        <input type="email" placeholder="example@mail.com" class="login-input" name="email" formControlName="email"><br>
+        <span *ngIf="isValied('email')">invalid email</span>
+      </div>
+        <!--  <span *ngIf="email.touched && email.errors?.required">email is Required</span>
+              <span [hidden]="!email.errors?.pattern"> invalid </span> -->
+      <div id="item">
+        <input type="text" placeholder="username" class="login-input" name="username" formControlName="username"><br>
+        <span *ngIf="isValied('username')">invalid username</span>
+      </div>
+        <!--    <span *ngIf="uname.touched && uname.errors?.required"> User Name is Required</span>
+                <span *ngIf="uname.touched && uname.errors?.maxlength">Name is incorrect</span>
+                <span *ngIf="uname.touched && uname.errors?.minlength">min length is 2</span> -->
+        <div id="item">
+          <input type="password" class="login-input" placeholder="password" name="password"
+          formControlName="password"><br>
+        <span *ngIf="isValied('password')">invalid password</span>
+        </div>
+        <!--  <span *ngIf="pass.touched && pass.errors?.required">Password is Required</span>
+              <span *ngIf="pass.touched && pass.errors?.maxlength">Maxlength incorrect</span>
+              <span *ngIf="pass.touched && pass.errors?.minlength">Min length is 6</span> -->
+      </form>
+     <div id="item">
+      <a routerLink="/users/login" >
+        <button (click)="register()" type="submit"> Register </button>
+      </a>
+     </div>
+    </div>
+  </div><br>
+</div>

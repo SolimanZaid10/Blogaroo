@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { Comment } from '../models/comment';
 import { Injectable } from '@angular/core';
 import { Blog } from '../models/blog';
 
@@ -28,7 +29,8 @@ export class BlogserviceService {
   }
 
   postComment(id:string,body:string){
-    return this.http.post<Comment>("http://localhost:4000/blogs/comment/"+id,body)
+    console.log(id)
+    return this.http.post<Comment>("http://localhost:4000/blogs/comment/"+id,{body})
 
   }
 

@@ -1,3 +1,4 @@
+import { Comment } from "./comment";
 export class Blog {
     constructor(public _id?:string,
         public title?:string,
