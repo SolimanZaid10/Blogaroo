@@ -1,0 +1,14 @@
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>userName</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of followings">
+            <td><a routerLink="/myprofile/{{item._id}}">{{item.username}}</a></td>
+        </tr>
+    </tbody>
+</table>
+

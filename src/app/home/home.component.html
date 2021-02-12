@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<br>
+<div class="card" *ngFor="let item of blogs">
+    <p>
+        &nbsp; &nbsp;<img [src]="'http://localhost:4000/'+item.authorImage" alt="userImg" class="avatar"> &nbsp; &nbsp;
+        <a routerLink="/profile/{{item.userId}}">{{item.author}}</a>
+    </p>
+    <hr>
+    <img [src]="'http://localhost:4000/'+item.blogImage" alt="blogImg">
+    <hr>
+    <div class="like">
+        <a routerLink="" class="like">
+            <span class="fa fa-heart-o fa-sm" aria-hidden="true" (click)="likeClick()"></span> {{numofLikes}} &nbsp;
+            <span routerLink="/comments" class="fa fa-comment-o fa-sm" aria-hidden="true" id="com"></span> 0 &nbsp;
+            <span class="fa fa-share fa-sm" aria-hidden="true"></span> 0 &nbsp;
+        </a>
+    </div><br>
+    <div id="blog">
+        <a routerLink="/blogs/{{item._id}}">
+            <p>{{item.title}}</p>
+        </a>
+    </div>
+    <div class="textarea-container"
+        style="border-top: 1px solid lightgray; height: 50px; margin-top: 10px; width: 100%;">
+        <textarea [(ngModel)]="comment" class="form-control" placeholder="Comment here ....."
+            style="width: 80%; height: 100%; border: none; display: inline-flex; padding-top: 12px;"></textarea>
+        <button style="text-align:top;" (click)="postComment()">Send</button>
+    </div>
+</div>
+<br>
+<br>

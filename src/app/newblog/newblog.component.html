@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1>Create post</h1>
+      <form [formGroup]="newblog" (ngSubmit)="AddOne()">
+        <div class="form-group ">
+          <input type="file" class="choose" (change)="imgInput($event.target.files)" /> <br>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="title" name="title" required maxlength="550">
+          <!--      <span *ngIf="title.touched && title.errors?.required">title is Required</span>
+              <span *ngIf="title.touched && title.errors?.maxlength">title is incorrect</span>
+              <span *ngIf="title.touched && title.errors?.minlength">min length is 2</span> -->
+          <br>
+        </div>
+        <div class="form-group">
+          <textarea rows="5" class="form-control" name="body" formControlName="body" name="body" required
+            maxlength="1000" minlength="2">
+                </textarea>
+          <!--   <span *ngIf="body.touched && body.errors?.required">body is Required</span>
+                <span *ngIf="body.touched && body.errors?.maxlength">body is incorrect</span>
+                <span *ngIf="body.touched && body.errors?.minlength">min length is 2</span> -->
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="tags" name="tags">
+        </div>
+        <div class="form-group">
+          <button type="submit">Create Blog</button>
+        </div>
+      </form> 
+    </div>
+  </div>
+</div><br><br><br><br>

@@ -1,0 +1,20 @@
+<br>
+<div class="card">
+    <p id="data">
+        &nbsp;<img [src]="'http://localhost:4000/'+blog.authorImage" alt="userImg" class="avatar"> &nbsp; &nbsp;
+        <a routerLink="/myprofile/{{blog.userId}}">{{blog.author}}</a>
+    </p>
+    <img [src]="'http://localhost:4000/'+blog.blogImage" alt="blogImg">
+    <a routerLink="/blogs/{{blog._id}}">
+        <p>{{blog.title}}</p>
+    </a>
+    <hr>
+    <p>{{blog.tags}}</p>
+    <hr>
+    <p>{{blog.body}}</p>
+    <hr>
+    <div *ngFor="let sd of blog.comments">{{sd.body}}</div>
+    <button class="btn btn-success" routerLink="/blogs/edit/{{blog._id}}">Edit</button>
+    <button class="btn btn-danger" (click)="deleteBlog()">Delete</button>
+</div>
+<br>

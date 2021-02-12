@@ -1,0 +1,113 @@
+div{
+    width: 45%;
+    
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+:host {
+    background-color:whitesmoke;
+    size: 100% 100%;
+    display: block;
+   
+}
+#com{
+    font-size: 35px;
+}
+.card{
+    background-color:white;
+    margin-left: 350px;
+    margin-bottom: 30px;
+    border: 1px solid lightgray;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.form-control {
+    border: 0;
+    margin-left: 20px;
+}
+.like{
+    color: lightgray;
+    font-size: 30px;
+    text-align: left;
+    margin-left: 13px;
+}
+
+#blog{
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+i{
+    margin-left: 30px;
+}
+
+#id{
+    display: inline-block;
+    
+}
+
+#comment{
+    display: inline-block;
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 60px;
+    text-align: left;
+    margin-top: 10px;
+    
+}
+p img{
+    margin-top: 5px;
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+  .textarea-container {
+    position: relative;
+  }
+  .textarea-container textarea {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  
+  .textarea-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    color: #3366BB ;
+    font-weight: bold;
+  }
+
+  textarea{
+    resize: none;
+    display: inline;
+
+}
+textarea:focus{
+outline: none;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+div button{
+    margin-right: 10px;
+}

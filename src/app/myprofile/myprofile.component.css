@@ -1,0 +1,47 @@
+#username{
+    color:black;
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+:host {
+    background-color:whitesmoke;
+    size: 200px 200px;
+    display: block;
+   
+}
+
+#user{
+    text-align: left;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-weight: bolder;
+    color: black;
+}
+
+.det{
+    text-align: left;
+    font-size: 16px;
+    margin-right: 50px;
+    display: inline-block;
+    color: black;
+}
+
+#line{
+    margin-top: 60px;
+}
+
+button{
+    width: 100px;
+    margin-left: 100px;
+    border-radius: 6px;
+    font-weight: 700;
+
+}
+
+input[type="button"], input[type="password"], textarea, select,button { 
+    outline: none;
+}
+
+

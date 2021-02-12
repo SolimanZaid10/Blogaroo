@@ -1,0 +1,28 @@
+nav{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    font-style: oblique;
+    font-stretch: expanded;
+    color: black;
+}
+
+nav form{
+    float: right;
+}
+
+.bg-orange {
+    background-color:white;
+  } 
+
+  #out{
+      margin-left: 25px;
+      outline: none;
+      border-radius: 10px;
+  }
+
+li a ,.navbar-brand{
+      color: brown;
+  }
+
+  
+  

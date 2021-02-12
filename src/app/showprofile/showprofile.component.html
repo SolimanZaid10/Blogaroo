@@ -1,0 +1,23 @@
+<br>
+<br>
+<br>
+<div class="container" style="text-align: center;" >
+    <div>
+        <div class="col-xs-12 col-lg-4">
+            <img [src]="'http://localhost:4000/'+user.userImage" alt="userImage" id="user" style="height: 150px; border-radius: 120px 120px 120px 120px; border: 1px solid gainsboro; ">
+        </div>
+        <div class="col-lg-8" style="text-align: left;">
+            <div id="username">{{user.username}} 
+             <button type="button" class="btn btn-primary" (click)="follow()">Follow </button>
+             <button type="button" class="btn btn-primary" >unfollow </button>
+            </div><br>
+            <span class="det"><span style="font-weight: bolder;"></span><b>Blogs</b></span>
+            <a routerLink="/users/followers/{{user._id}}"><div class="det"><span style="font-weight: bolder;">{{numFollowers}} Followers</span></div></a>
+            <a routerLink="/users/followings/{{user._id}}"><span class="det"><span style="font-weight: bolder;">{{numFollowimgs}} Followings</span></span></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+<hr id="line" style="background-color: lightgray; height: 1px;"> 
+</div>
+<app-home></app-home>
