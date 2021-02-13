@@ -10,6 +10,12 @@ import { UserserviceService } from '../services/userservice.service';
 })
 export class FollowingsComponent implements OnInit {
 
+  check(id:string){
+    if(id==JSON.parse(localStorage.getItem('user'))._id){
+      this.router.navigate(['myprofile/'+id])
+    }
+  }
+
   followings:User[]=[];
   constructor(public ar:ActivatedRoute,public router:Router,public userserice:UserserviceService) { }
 

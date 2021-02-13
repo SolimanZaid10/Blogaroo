@@ -44,4 +44,8 @@ input[type="button"], input[type="password"], textarea, select,button {
     outline: none;
 }
 
+button :focus{
+    border: none;
+}
+
 

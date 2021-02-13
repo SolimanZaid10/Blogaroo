@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from '../models/blog';
 import { User } from '../models/user';
 import { BlogserviceService } from '../services/blogservice.service';
@@ -20,9 +20,16 @@ export class HomeComponent implements OnInit {
   }
 
 
+  check(id:string){
+    if(id==JSON.parse(localStorage.getItem('user'))._id){
+      this.router.navigate(['myprofile/'+id])
+    }
+  }
+
+
   blogs:Blog[]=[];
   users:User[]=[];
-  constructor(public blogService:BlogserviceService,public userservice:UserserviceService,public ac:ActivatedRoute) { }
+  constructor(public blogService:BlogserviceService,public userservice:UserserviceService,public ac:ActivatedRoute,public router:Router) { }
 
   ngOnInit(): void {
     this.blogService.getallBlogs().subscribe(
@@ -30,11 +37,7 @@ export class HomeComponent implements OnInit {
         this.blogs=blogsData;
       }
     )
-    this.userservice.getallUsers().subscribe(
-      usersData=>{
-        this.users=usersData
-      }
-    )
+
   }
 
   postComment(id:any){

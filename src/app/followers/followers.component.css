@@ -1,0 +1,22 @@
+table{
+    width: 40%;
+    margin: 20px auto;
+    border: 1px solid gainsboro;
+    background-color: white;
+   
+
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  :host {
+    background-color:whitesmoke;
+    size: 100% 100%;
+    display: block;
+   
+}

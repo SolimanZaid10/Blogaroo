@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -11,30 +12,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
           
     <div class="container" >
-        <div style="width: 300px; height: 50px; background-color:steelblue; text-align: center; margin-left: 90px; border-radius: 5px; color: white;" > 
-            <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Edit Post </h2>
-        </div>
+       <div style="width: 300px; height: 50px; background-color:steelblue; text-align: center; margin-left: 90px; border-radius: 5px; color: white;">
+        <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Edit your info</h2>
+       </div>
         <div class="form-group">
             <div class="row">
-                <label for="title" class="col-sm-3 control-label">Title </label>
+                <label for="title" class="col-sm-3 control-label">username </label>
                 <div >
-                   <input class="form-control" id="title" [(ngModel)]="editedBlog.title" value="{{editedBlog.title}}">
+                   <input class="form-control" id="title" [(ngModel)]="editUser.username" value="{{editUser.username}}">
                 </div>
           </div>
      </div>
+     <div class="form-group">
+        <div class="row">
+            <label for="title" class="col-sm-3 control-label">password </label>
+            <div >
+               <input class="form-control" id="title"type="password" [(ngModel)]="editUser.password" value="{{editUser.password}}" placeholder="new password">
+            </div>
+      </div>
+ </div>
         <div class="form-group">
             <div class="row">
-            <label for="body" > 	&nbsp;	&nbsp;Body </label>
+            <label for="body" >&nbsp;	&nbsp;firstname </label>
             <div >
-            <textarea class="form-control" id="body"[(ngModel)]="editedBlog.body" value="{{editedBlog.body}}"></textarea>
+            <input class="form-control" [(ngModel)]="editUser.firstName" value="{{editUser.firstName}}">
             </div>
         </div>
         </div>
         <div class="form-group">
             <div class="row">
-            <label for="footer" class="col-sm-3 control-label"> Tags </label>
+            <label for="footer" class="col-sm-3 control-label"> lastname </label>
             <div >
-                <input class="form-control" id="tags" [(ngModel)]="editedBlog.tags" value="{{editedBlog.tags}}">
+                <input class="form-control" id="tags" [(ngModel)]="editUser.lastName" value="{{editUser.lastName}}">
             </div>
         </div>
         </div>
@@ -44,7 +53,7 @@
         </div>
     </div>
     </div>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
   
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

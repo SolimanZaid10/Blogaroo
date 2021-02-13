@@ -11,11 +11,15 @@ export class BlogserviceService {
   getallBlogs(){
     return this.http.get<Blog[]>("http://localhost:4000/");
   }
-
+   getuserBlogs(){
+    return this.http.get<Blog[]>("http://localhost:4000/blogs");
+  } 
+  shoWBlogs(id:string){
+    return this.http.get<Blog[]>("http://localhost:4000/blogs/userBlogs/"+id);
+  }
   getBlog(id:string){
     return this.http.get<Blog>("http://localhost:4000/blogs/"+id);
   }
-
   deleteBlog(id:string){
     return this.http.delete<Blog>("http://localhost:4000/blogs/"+id);
   }
@@ -23,7 +27,6 @@ export class BlogserviceService {
   editBlog(blog:Blog){
     return this.http.patch<Blog>("http://localhost:4000/blogs/edit/"+blog._id,blog)
   }
-
   postblog(blog:any){
     return this.http.post<Blog>("http://localhost:4000/blogs/add",blog)
   }
@@ -35,7 +38,6 @@ export class BlogserviceService {
   }
 
 
-  
   
 
   constructor(public http:HttpClient) { }

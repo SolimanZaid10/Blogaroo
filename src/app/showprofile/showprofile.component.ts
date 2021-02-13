@@ -13,37 +13,46 @@ export class ShowprofileComponent implements OnInit {
   user:User;
   numFollowers=0;
   numFollowimgs=0;
-  
+  following;
 
   follow(){
-    let id=0;
-    this.ar.params.subscribe(
-      a=>{id=a['id']
-      this.userService.follow(this.user).subscribe(
-        e=>{
-          this.user=e
-          console.log(e)
+    this.following=1;
+        this.userService.follow(this.user).subscribe(
+            e=>{
+              
+              console.log(e)
+            }
+          )
         
+      }
+  unfollow(){
+  this.following=0;
+    this.userService.unfollow(this.user).subscribe(
+        e=>{
+          
+          console.log(e)
         }
       )
-    }
-
-    )
     
   }
   constructor(public userService:UserserviceService,public ar:ActivatedRoute,public router:Router,public authservice:AuthService) { }
-
+ id:string;
   ngOnInit(): void {
-    let id:string;
+  
   JSON.parse(localStorage.getItem('user'));
     this.ar.params.subscribe(
       a=>{
-        id=a['id']
-        this.userService.getUser(id).subscribe(
+        this.id=a['id']
+        this.userService.getUser(this.id).subscribe(
           d=>{
             this.user=d
             this.numFollowers=this.user.followers.length
             this.numFollowimgs=this.user.followings.length
+            if(this.user.followers.includes(JSON.parse(localStorage.getItem('user'))._id)){
+              this.following=1;
+            }else{
+              this.following=0;
+            }
           }
          
         )

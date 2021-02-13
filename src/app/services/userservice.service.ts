@@ -12,9 +12,12 @@ export class UserserviceService {
     return this.http.get<User[]>("http://localhost:4000/users");
   }
 
-
   getUser(id:string){
     return this.http.get<User>("http://localhost:4000/users/"+id);
+  }
+
+  editUser(user:User){
+    return this.http.patch<User>("http://localhost:4000/users/edit/"+user._id,user)
   }
   
   getFollowings(id:string){
@@ -25,24 +28,16 @@ export class UserserviceService {
     return this.http.get<User[]>("http://localhost:4000/users/followers/"+id)
   }
 
+  deleteUser(id:any){
+    return this.http.delete("http://localhost:4000/users/"+id)
+  }
+
   follow(user:User){
-    const usfollow=user.followers.includes(JSON.parse(localStorage.getItem('user'))._id)
-    return this.http.post<User>("http://localhost:4000/users/follow/",user._id,{})
+    return this.http.post<User>("http://localhost:4000/users/follow/"+user._id,{})
   }
 
   unfollow(user:User){
-    for (let i = 0; i <user.followers.length; i++) {
-     console.log(user.followers[i])
-     console.log(user._id)
-     if(JSON.parse(localStorage.getItem('user'))._id===user.followers[i]){
-
-     }else{
-      return this.http.post<User>("http://localhost:4000/users/follow/",user._id,{})
-
-     }
-     
-    }
-   
+      return this.http.post<User>("http://localhost:4000/users/unfollow/"+user._id,{})
   }
 
 

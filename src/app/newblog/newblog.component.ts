@@ -12,7 +12,7 @@ import { BlogserviceService } from '../services/blogservice.service';
 })
 export class NewblogComponent implements OnInit {
   newblog: FormGroup;
-  blog: Blog = new Blog();
+  blog: Blog = new Blog();  
   formData = new FormData();
 
 
@@ -29,8 +29,12 @@ export class NewblogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imgInput(files: any) {
+    this.newblog.get('blogImage').setValue(files.item(0));
+  }
 
   AddOne() {
+
     this.formData.append('title', this.newblog.get('title').value);
     this.formData.append('body', this.newblog.get('body').value);
     this.formData.append('blogImage', this.newblog.get('blogImage').value)
@@ -45,8 +49,7 @@ export class NewblogComponent implements OnInit {
         console.log(err);
       })
   }
-  imgInput(files: any) {
-    this.newblog.get('blogImage').setValue(files.item(0));
-  }
+  
+ 
 
 }

@@ -1,14 +1,18 @@
-
-<table class="table table-hover">
-    <thead>
-        <tr>
-            <th>userName</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let item of followers">
-            <td><a routerLink="/myprofile/{{item._id}}">{{item.username}}</a></td>
-        </tr>
-    </tbody>
-</table>
-
+<div style="background-color: whitesmoke; height: 582px;"><br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Followers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of followers">
+                <td><a routerLink="/profile/{{item._id}}"  (click)="check(item._id)">
+                  <img  [src]="'http://localhost:4000/'+item.userImage" alt="userImg" class="avatar">
+                    {{item.username}}</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+</div>

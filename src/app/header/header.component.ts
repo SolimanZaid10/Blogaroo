@@ -10,15 +10,14 @@ import { UserserviceService } from '../services/userservice.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  user:User;
+  
+  user=null;
 
-  to(){
-    this.router.navigate(['myprofile/id']);
-  }
-
+ 
   constructor(public userservice:UserserviceService,public ar:ActivatedRoute,public router:Router,public authservice:AuthService) { }
 
   ngOnInit(): void {
+    this.user=JSON.parse(localStorage.getItem('user'));
   }
 
 }

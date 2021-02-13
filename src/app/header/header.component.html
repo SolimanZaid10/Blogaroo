@@ -13,12 +13,12 @@
         </button>
         <a class="navbar-brand" >Blogaroo</a>
     </div>
-
+    
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
             <li routerLinkActive="active">
-                <a routerLink="/myprofile" (click)="to()" *ngIf="authservice.loggedIn()">myProfile</a>
+                <a routerLink="/myprofile/{{user._id}}"  *ngIf="authservice.loggedIn()">myProfile</a>
             </li>
             <li routerLinkActive="active">
                 <a routerLink="/home" *ngIf="authservice.loggedIn()">Home</a>

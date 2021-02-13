@@ -24,6 +24,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
 import { UserserviceService } from './services/userservice.service';
 import { BlogserviceService } from './services/blogservice.service';
 import { ShowprofileComponent } from './showprofile/showprofile.component';
+import { LoggeddataComponent } from './loggeddata/loggeddata.component';
+import { EdituserComponent } from './edituser/edituser.component';
 
 
 
@@ -44,6 +46,8 @@ import { ShowprofileComponent } from './showprofile/showprofile.component';
     FollowersComponent,
     FollowingsComponent,
     ShowprofileComponent,
+    LoggeddataComponent,
+    EdituserComponent,
    
    
   ],

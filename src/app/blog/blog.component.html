@@ -5,16 +5,16 @@
         <a routerLink="/myprofile/{{blog.userId}}">{{blog.author}}</a>
     </p>
     <img [src]="'http://localhost:4000/'+blog.blogImage" alt="blogImg">
-    <p>{{blog.title}}</p>
+    <p id="title">{{blog.title}}</p>
     <hr>
     <p>{{blog.tags}}</p>
     <hr>
-    <p>{{blog.body}}</p>
+    <p id="itmbody">{{blog.body}}</p>
     <hr>
     <div *ngFor="let item of blog.comments" id="comment">
         <img [src]="'http://localhost:4000/'+item.authorImg" alt="userImg" class="avatar">
         <span style="font-weight: bold; margin-left: 5px;">{{item.authorName}}</span><br>
-        <span>{{item.body}}</span>
+        <span  >{{item.body}}</span>
     </div>
     <button class="btn btn-success" routerLink="/blogs/edit/{{blog._id}}"> &nbsp; Edit &nbsp;</button>
     <button class="btn btn-danger" (click)="deleteBlog()">Delete</button>
